@@ -15,4 +15,17 @@ let firstOperand;
 let secondOperand;
 let operator;
 
-const operate = (firstNumber,secondNumber,operator);
+const operate = (firstNumber,secondNumber,operator)=>{
+    if (operator === "+"){
+      return  add(firstNumber,secondNumber)
+    }
+    else if (operator === "-"){
+      return  substract(firstNumber,secondNumber)
+    }
+    else if (operator === "*"){
+      return  multiply(firstNumber,secondNumber)
+    }
+    else if (operator === "/"){
+      return  divide(firstNumber,secondNumber)
+    }
+};
