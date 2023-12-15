@@ -10,3 +10,9 @@ const multiply = (a,b)=>{
 const divide = (a,b)=>{
     return a/b
 }
+
+let firstOperand;
+let secondOperand;
+let operator;
+
+const operate = (firstNumber,secondNumber,operator);
