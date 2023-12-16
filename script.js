@@ -3,6 +3,7 @@ const screen = document.querySelector(".screen");
 const operators = Array.from(document.querySelectorAll('.operators'));
 const digits = Array.from(document.querySelectorAll('.digits'));
 const equals = document.querySelector(".equals");
+const allClear = document.querySelector(".allclear");
 
 const add = (a, b) => {
   return a + b
