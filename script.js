@@ -1,6 +1,6 @@
 const buttons = Array.from(document.querySelectorAll('button')); 
 const screen = document.querySelector(".screen");
-const operands = Array.from(document.querySelectorAll('.operands'));
+const operators = Array.from(document.querySelectorAll('.operators'));
 const digits = Array.from(document.querySelectorAll('.digits'));
 const equals = document.querySelector(".equals");
 
@@ -19,7 +19,7 @@ const divide = (a,b)=>{
 
 let firstValue;
 let secondValue;
-let operator = null;
+let operatorValue;
 
 const operate = (firstNumber,secondNumber,operator)=>{
     if (operator === "+"){
