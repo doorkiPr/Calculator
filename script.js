@@ -78,7 +78,7 @@ operators.forEach(operator => {
 })
 
 const setTotalValue = () => {
-  firstValue = operate(+firstValue, +secondValue, operatorValue);
+  firstValue = +operate(+firstValue, +secondValue, operatorValue).toFixed(2);
   secondValue = null; // set second value to null so we can string operations 
   screen.textContent = firstValue;
 };
