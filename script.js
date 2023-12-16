@@ -36,19 +36,26 @@ const operate = (firstNumber,secondNumber,operator)=>{
     }
 };
 
+const populateScreen = (value)=>{
+  screen.textContent=value;
+};
+
 const setOperandValue = (digit)=>{
   if (!operator){
     firstOperand ? firstOperand += digit.textContent : firstOperand = digit.textContent;
+    populateScreen(firstOperand);
     }
   else {
     secondOperand ? secondOperand += digit.textContent : secondOperand = digit.textContent;
+    populateScreen(secondOperand);
     }
-}
+};
+
 
 digits.forEach( digit =>{
   digit.addEventListener("click",()=>{
     setOperandValue(digit);
     })
-})
+});
 
 // on click it should store the number in firstOperand , unless we called an operator , then we store the digit on the second operand
