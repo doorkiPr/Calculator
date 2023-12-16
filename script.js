@@ -67,10 +67,14 @@ operators.forEach(operator=>{
   })
 })
 
-equals.addEventListener("click",()=>{
+const setTotalValue = ()=>{
   firstValue = operate(+firstValue,+secondValue,operatorValue);
-  secondValue = 0;
+  secondValue = null; // set second value to null so we can string operations 
   screen.textContent = firstValue;
+};
+
+equals.addEventListener("click",()=>{
+  setTotalValue();
 })
 
 // on click it should store the number in firstValue , unless we called an operator , then we store the digit on the second operand
