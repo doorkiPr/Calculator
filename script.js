@@ -16,8 +16,8 @@ const multiply = (a, b) => {
 const divide = (a, b) => {
   return a / b
 }
-const modelo = (a,b)=>{
-  return a%b
+const modelo = (a, b) => {
+  return a % b
 }
 
 let firstValue;
@@ -37,7 +37,7 @@ const operate = (firstNumber, secondNumber, operator) => {
   else if (operator === "/") {
     return divide(firstNumber, secondNumber)
   }
-  else if (operator ==="%"){
+  else if (operator === "%") {
     return modelo(firstNumber, secondNumber)
   }
 };
@@ -64,7 +64,7 @@ digits.forEach(digit => {
 });
 
 const setOperatorValue = (operator) => {
-  if (secondValue != null){
+  if (secondValue != null) {
     setTotalValue();
   }
   operatorValue = operator;
@@ -83,7 +83,9 @@ const setTotalValue = () => {
 };
 
 equals.addEventListener("click", () => {
-  setTotalValue();
+  if (secondValue != null) {
+    setTotalValue()
+  }
 })
 
 // on click it should store the number in firstValue , unless we called an operator , then we store the digit on the second operand
