@@ -1,5 +1,8 @@
 const buttons = Array.from(document.querySelectorAll('button')); 
 const screen = document.querySelector(".screen");
+const operands = Array.from(document.querySelectorAll('.operands'));
+const digits = Array.from(document.querySelectorAll('.operands'));
+const equals = document.querySelector(".equals");
 
 const add = (a,b)=>{
     return a+b
@@ -14,8 +17,8 @@ const divide = (a,b)=>{
     return a/b
 }
 
-let firstOperand = null;
-let secondOperand = null;
+let firstOperand;
+let secondOperand;
 let operator = null;
 
 const operate = (firstNumber,secondNumber,operator)=>{
@@ -33,9 +36,4 @@ const operate = (firstNumber,secondNumber,operator)=>{
     }
 };
 
-buttons.forEach(button =>{
-  if (button.classList[0] === "digits" || button.classList[0] === "operators" ||  button.classList[0] === "decimal")
-  button.addEventListener("click",()=>{
-    screen.textContent+=button.textContent
-  })
-})
+// on click it should store the number in firstOperand , unless firstOperand already exists  , then it should store it in second opperand
