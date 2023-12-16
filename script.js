@@ -21,7 +21,7 @@ const modelo = (a, b) => {
   return a % b
 }
 
-let firstValue = 0;
+let firstValue ;
 let secondValue;
 let operatorValue;
 
@@ -48,7 +48,7 @@ const populateScreen = (value) => {
 };
 
 const setValue = (digit) => {
-  if (!operatorValue) {
+  if (!operatorValue || !firstValue) {
     firstValue ? firstValue += digit.textContent : firstValue = digit.textContent;
     populateScreen(firstValue);
   }
