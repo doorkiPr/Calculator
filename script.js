@@ -88,13 +88,13 @@ equals.addEventListener("click", () => {
     setTotalValue()
   }
 })
-const clear = ()=>{
+const clear = () => {
   firstValue = null;
   secondValue = null;
-  screen.textContent="";
+  screen.textContent = "";
 };
 
-allClear.addEventListener("click", ()=>{
+allClear.addEventListener("click", () => {
   clear();
 })
 // on click it should store the number in firstValue , unless we called an operator , then we store the digit on the second operand
