@@ -16,6 +16,9 @@ const multiply = (a, b) => {
 const divide = (a, b) => {
   return a / b
 }
+const modelo = (a,b)=>{
+  return a%b
+}
 
 let firstValue;
 let secondValue;
@@ -33,6 +36,9 @@ const operate = (firstNumber, secondNumber, operator) => {
   }
   else if (operator === "/") {
     return divide(firstNumber, secondNumber)
+  }
+  else if (operator ==="%"){
+    return modelo(firstNumber, secondNumber)
   }
 };
 
