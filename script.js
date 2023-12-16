@@ -45,4 +45,10 @@ const setOperandValue = (digit)=>{
     }
 }
 
+digits.forEach( digit =>{
+  digit.addEventListener("click",()=>{
+    setOperandValue(digit);
+    })
+})
+
 // on click it should store the number in firstOperand , unless we called an operator , then we store the digit on the second operand
