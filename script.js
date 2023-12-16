@@ -64,10 +64,10 @@ digits.forEach(digit => {
 });
 
 const setOperatorValue = (operator) => {
-  operatorValue = operator;
   if (secondValue != null){
     setTotalValue();
   }
+  operatorValue = operator;
 }
 
 operators.forEach(operator => {
