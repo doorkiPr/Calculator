@@ -26,6 +26,10 @@ body {
     border-radius: 15px;
     color: #60A07F;
     box-shadow: inset 2px 3px 5px 0px rgba(0,0,0,0.7);
+    font-size: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
 
 }
 .buttonWrapper{
