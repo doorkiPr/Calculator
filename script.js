@@ -67,4 +67,10 @@ operators.forEach(operator=>{
   })
 })
 
+equals.addEventListener("click",()=>{
+  firstValue = operate(+firstValue,+secondValue,operatorValue);
+  secondValue = 0;
+  screen.textContent = firstValue;
+})
+
 // on click it should store the number in firstValue , unless we called an operator , then we store the digit on the second operand
