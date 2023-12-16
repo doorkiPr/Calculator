@@ -34,6 +34,7 @@ const operate = (firstNumber,secondNumber,operator)=>{
 };
 
 buttons.forEach(button =>{
+  if (button.classList[0] === "digits" || button.classList[0] === "operators" ||  button.classList[0] === "decimal")
   button.addEventListener("click",()=>{
     screen.textContent+=button.textContent
   })
