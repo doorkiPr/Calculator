@@ -28,7 +28,7 @@ const operate = (firstNumber, secondNumber, operator) => {
   else if (operator === "-") {
     return substract(firstNumber, secondNumber)
   }
-  else if (operator === "*") {
+  else if (operator === "x") {
     return multiply(firstNumber, secondNumber)
   }
   else if (operator === "/") {
