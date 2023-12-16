@@ -1,3 +1,5 @@
+const buttons = Array.from(document.querySelectorAll('button')); 
+
 const add = (a,b)=>{
     return a+b
 };
