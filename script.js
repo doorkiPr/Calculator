@@ -89,4 +89,7 @@ equals.addEventListener("click", () => {
   }
 })
 
+allClear.addEventListener("click", ()=>{
+  
+})
 // on click it should store the number in firstValue , unless we called an operator , then we store the digit on the second operand
