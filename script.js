@@ -17,8 +17,8 @@ const divide = (a,b)=>{
     return a/b
 }
 
-let firstOperand;
-let secondOperand;
+let firstValue;
+let secondValue;
 let operator = null;
 
 const operate = (firstNumber,secondNumber,operator)=>{
@@ -42,15 +42,14 @@ const populateScreen = (value)=>{
 
 const setOperandValue = (digit)=>{
   if (!operator){
-    firstOperand ? firstOperand += digit.textContent : firstOperand = digit.textContent;
-    populateScreen(firstOperand);
+    firstValue ? firstValue += digit.textContent : firstValue = digit.textContent;
+    populateScreen(firstValue);
     }
   else {
-    secondOperand ? secondOperand += digit.textContent : secondOperand = digit.textContent;
-    populateScreen(secondOperand);
+    secondValue ? secondValue += digit.textContent : secondValue = digit.textContent;
+    populateScreen(secondValue);
     }
 };
-
 
 digits.forEach( digit =>{
   digit.addEventListener("click",()=>{
@@ -58,4 +57,4 @@ digits.forEach( digit =>{
     })
 });
 
-// on click it should store the number in firstOperand , unless we called an operator , then we store the digit on the second operand
+// on click it should store the number in firstValue , unless we called an operator , then we store the digit on the second operand
