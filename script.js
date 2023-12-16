@@ -1,79 +1,79 @@
-const buttons = Array.from(document.querySelectorAll('button')); 
+const buttons = Array.from(document.querySelectorAll('button'));
 const screen = document.querySelector(".screen");
 const operators = Array.from(document.querySelectorAll('.operators'));
 const digits = Array.from(document.querySelectorAll('.digits'));
 const equals = document.querySelector(".equals");
 
-const add = (a,b)=>{
-    return a+b
+const add = (a, b) => {
+  return a + b
 };
-const substract = (a,b)=>{
-    return a-b
+const substract = (a, b) => {
+  return a - b
 };
-const multiply = (a,b)=>{
-    return a*b
+const multiply = (a, b) => {
+  return a * b
 }
-const divide = (a,b)=>{
-    return a/b
+const divide = (a, b) => {
+  return a / b
 }
 
 let firstValue;
 let secondValue;
 let operatorValue;
 
-const operate = (firstNumber,secondNumber,operator)=>{
-    if (operator === "+"){
-      return  add(firstNumber,secondNumber)
-    }
-    else if (operator === "-"){
-      return  substract(firstNumber,secondNumber)
-    }
-    else if (operator === "*"){
-      return  multiply(firstNumber,secondNumber)
-    }
-    else if (operator === "/"){
-      return  divide(firstNumber,secondNumber)
-    }
+const operate = (firstNumber, secondNumber, operator) => {
+  if (operator === "+") {
+    return add(firstNumber, secondNumber)
+  }
+  else if (operator === "-") {
+    return substract(firstNumber, secondNumber)
+  }
+  else if (operator === "*") {
+    return multiply(firstNumber, secondNumber)
+  }
+  else if (operator === "/") {
+    return divide(firstNumber, secondNumber)
+  }
 };
 
-const populateScreen = (value)=>{
-  screen.textContent=value;
+const populateScreen = (value) => {
+  screen.textContent = value;
 };
 
-const setValue = (digit)=>{
-  if (!operatorValue){
+const setValue = (digit) => {
+  if (!operatorValue) {
     firstValue ? firstValue += digit.textContent : firstValue = digit.textContent;
     populateScreen(firstValue);
-    }
+  }
   else {
     secondValue ? secondValue += digit.textContent : secondValue = digit.textContent;
     populateScreen(secondValue);
-    }
+  }
 };
 
-digits.forEach( digit =>{
-  digit.addEventListener("click",()=>{
+digits.forEach(digit => {
+  digit.addEventListener("click", () => {
     setValue(digit);
-    })
+  })
 });
 
-const setOperatorValue =(operator)=> {
+const setOperatorValue = (operator) => {
   operatorValue = operator;
 }
 
-operators.forEach(operator=>{
-  operator.addEventListener("click",()=>{
-  setOperatorValue(operator.textContent);
+operators.forEach(operator => {
+  operator.addEventListener("click", () => {
+    setOperatorValue(operator.textContent);
   })
 })
 
-const setTotalValue = ()=>{
-  firstValue = operate(+firstValue,+secondValue,operatorValue);
+const setTotalValue = () => {
+  firstValue = operate(+firstValue, +secondValue, operatorValue);
   secondValue = null; // set second value to null so we can string operations 
   screen.textContent = firstValue;
 };
 
-equals.addEventListener("click",()=>{
+equals.addEventListener("click", () => {
   setTotalValue();
 })
 
