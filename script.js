@@ -1,7 +1,7 @@
 const buttons = Array.from(document.querySelectorAll('button')); 
 const screen = document.querySelector(".screen");
 const operands = Array.from(document.querySelectorAll('.operands'));
-const digits = Array.from(document.querySelectorAll('.operands'));
+const digits = Array.from(document.querySelectorAll('.digits'));
 const equals = document.querySelector(".equals");
 
 const add = (a,b)=>{
@@ -36,4 +36,13 @@ const operate = (firstNumber,secondNumber,operator)=>{
     }
 };
 
-// on click it should store the number in firstOperand , unless firstOperand already exists  , then it should store it in second opperand
+const setOperandValue = (digit)=>{
+  if (!operator){
+    firstOperand ? firstOperand += digit.textContent : firstOperand = digit.textContent;
+    }
+  else {
+    secondOperand ? secondOperand += digit.textContent : secondOperand = digit.textContent;
+    }
+}
+
+// on click it should store the number in firstOperand , unless we called an operator , then we store the digit on the second operand
