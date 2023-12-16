@@ -21,7 +21,7 @@ const modelo = (a, b) => {
   return a % b
 }
 
-let firstValue;
+let firstValue = 0;
 let secondValue;
 let operatorValue;
 
