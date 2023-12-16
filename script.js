@@ -14,9 +14,9 @@ const divide = (a,b)=>{
     return a/b
 }
 
-let firstOperand;
-let secondOperand;
-let operator;
+let firstOperand = null;
+let secondOperand = null;
+let operator = null;
 
 const operate = (firstNumber,secondNumber,operator)=>{
     if (operator === "+"){
