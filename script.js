@@ -32,3 +32,9 @@ const operate = (firstNumber,secondNumber,operator)=>{
       return  divide(firstNumber,secondNumber)
     }
 };
+
+buttons.forEach(button =>{
+  button.addEventListener("click",()=>{
+    screen.textContent+=button.textContent
+  })
+})
