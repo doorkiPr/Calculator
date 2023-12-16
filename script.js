@@ -40,7 +40,7 @@ const populateScreen = (value)=>{
   screen.textContent=value;
 };
 
-const setOperandValue = (digit)=>{
+const setValue = (digit)=>{
   if (!operator){
     firstValue ? firstValue += digit.textContent : firstValue = digit.textContent;
     populateScreen(firstValue);
@@ -53,7 +53,7 @@ const setOperandValue = (digit)=>{
 
 digits.forEach( digit =>{
   digit.addEventListener("click",()=>{
-    setOperandValue(digit);
+    setValue(digit);
     })
 });
 
